@@ -4,32 +4,28 @@
 }
 
 .header {
-    background-color: rgb(0, 212, 85);
-    width: 100%;
-    height: 100px;
-}
-
-.header-barra-informacion {
-    background-color: rgb(15, 83, 143);
-    width: 100%;
-    height: 30px;
-}
-
-.header-barra-botones {
     background-color: aquamarine;
     width: 100%;
     height: 68px;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-}
-
-.header-group-btn {
-    background-color: bisque;
-    width: auto;
-    height: auto;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
 }
 
 .header-btn {
     width: auto;
     height: 100%;
+}
+
+.main {
+    margin-top: 85px;
+}
+
+.footer {
+    background-color: brown;
+    width: 100%;
+    height: auto;
+    min-height: 600px;
 }
