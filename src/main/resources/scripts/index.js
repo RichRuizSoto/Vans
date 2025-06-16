@@ -1,30 +1,26 @@
-function mostrarContenido(opcion) {
-    const contenedor = document.getElementById(`div-${opcion}`);
-    let contenido = '';
+function crearBoton(texto) {
+    const boton = document.createElement('button');
+    boton.className = 'contenido-btn';
+    boton.textContent = texto;
+    return boton;
+} 
 
-    contenedor.hidden = !contenedor.hidden
+function mostrarContenido (opcion) {
+const contenedor = document.getElementById(`div-${opcion}`);
+contenedor.hidden = !contenedor.hidden;
+contenedor.innerHTML = '';
 
-    switch (opcion) {
-        case 'featured':
-            contenido = `<button>Extra Comfort Shoes</button><br>
-                        <button>Chunky & Retro Shoes</button><br>
-                        <button>Customize Our Shoes</button><br>
-                        <button>Slip On Shoes</button><br>
-                        <button>Mary Jane Shoes</button><br>
-                        <button>Platform Shoes</button><br>
-                        <button>Skate Shoes</button><br>
-                        <button>Sandals and Slides</button><br>
-                        <button>Offers & Promotions</button><br>
-                        <button>Gift Cards</button><br>`
-            break;
-        case 'icons':
-        case 'shop':
-        case 'sports':
-        case 'support':
-        case 'about':
-            break;
+    const botonesPorOpcion = {
+        featured: ["Extra Comfort Shoes", "Chunky & Retro Shoes", "Customize Our Shoes", "Slip On Shoes", "Mary Jane Shoes", "Platform Shoes", "Skate Shoes", "Sandals and Slides", "Offers & Promotions", "Gift Cards"],
+        icons: ["Old Skool", "Authentic", "Classic Slip-On", "Sk8-Hi", "Half Cab"],
+        shop: ["Checkerboard", "White", "Black", "Pink", "Blue"],
+        sports: ["Skateboarding", "Surf", "BMX", "Snowboarding"],
+        support: ["Help Center", "FAQ", "Order Status", "Shipping", "Returns", "Size Guides", "Find a Store", "Learn About Vans Family", "Contact Us"],
+        about: ["Our Story", "Sustainability", "Careers"]
+    };
+
+    botonesPorOpcion[opcion]?.forEach(texto => {
+        contenedor.appendChild(crearBoton(texto));
+        contenedor.appendChild(document.createElement('br'));
+    })
     }
-    contenedor.innerHTML = contenido;
-}
-
-

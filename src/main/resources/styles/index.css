@@ -24,8 +24,41 @@
 }
 
 .footer {
-    background-color: brown;
+    background-color: rgb(39, 38, 38);
     width: 100%;
     height: auto;
-    min-height: 600px;
+    min-height: 595px;
+}
+
+.footer-contenedor-btn {
+    height: auto;
+    width: 405px;
+    background-color: transparent;
+    padding: 26px 22px;
+}
+
+.contenido-btn, .footer-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: rgb(199, 199, 199);
+}
+
+.contenido-btn {
+    padding-top: 12px;
+}
+
+.footer-btn {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    padding: 14px 0px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.footer-contenedor-final {
+    margin-top: 120px;
+    margin-left: 22px;
 }
