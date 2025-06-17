@@ -28,6 +28,7 @@
     width: 100%;
     height: auto;
     min-height: 595px;
+  box-shadow: 0 0px 20px 15px rgba(0, 0, 0, 0.7);
 }
 
 .footer-contenedor-btn {
@@ -37,7 +38,8 @@
     padding: 26px 22px;
 }
 
-.contenido-btn, .footer-btn {
+.contenido-btn,
+.footer-btn {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -61,4 +63,79 @@
 .footer-contenedor-final {
     margin-top: 120px;
     margin-left: 22px;
+}
+
+.contenedor-final-redes-btn {
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    width: 13px;
+    height: 13px;
+    margin: 8px;
+    cursor: pointer;
+    justify-content: baseline;
+}
+
+.x-btn {
+    background-image: url(./../icons/x.png);
+}
+
+.facebook-btn {
+    background-image: url(./../icons/facebook.png);
+        width: 12px;
+    height: 12px;
+}
+
+.pinterest-btn {
+    background-image: url(./../icons/pinterest.png);
+        width: 16px;
+    height: 16px;
+}
+
+.youtube-btn {
+    background-image: url(./../icons/youtube.png);
+}
+
+.instagram-btn {
+    background-image: url(./../icons/instagram.jpg);
+}
+
+.footer-contenedor-term {
+    width: 360px;
+    padding-bottom: 22px;
+}
+
+.div-location {
+    background-color: transparent;
+    justify-content: center;
+}
+
+.location-flag {
+        background-color: transparent;
+    background-image: url(./../icons/flag.png);
+    background-size: cover;
+    height: 18px;
+    width: 23px;
+    border: none;
+    cursor: pointer;
+}
+
+.location-text {
+        background-color: transparent;
+    color: rgb(199, 199, 199);
+    border: none;        
+    cursor: pointer;
+    font-size: 12px;
+    justify-content: center;
+
+}
+
+.contenedor-term-btn {
+    font-size: 12px;
+    color: rgb(199, 199, 199);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    padding: 0px;
+    margin: 2px;
 }
