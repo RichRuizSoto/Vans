@@ -3,12 +3,12 @@ function crearBoton(texto) {
     boton.className = 'contenido-btn';
     boton.textContent = texto;
     return boton;
-} 
+}
 
-function mostrarContenido (opcion) {
-const contenedor = document.getElementById(`div-${opcion}`);
-contenedor.hidden = !contenedor.hidden;
-contenedor.innerHTML = '';
+function mostrarContenido(opcion) {
+    const contenedor = document.getElementById(`div-${opcion}`);
+    contenedor.hidden = !contenedor.hidden;
+    contenedor.innerHTML = '';
 
     const botonesPorOpcion = {
         featured: ["Extra Comfort Shoes", "Chunky & Retro Shoes", "Customize Our Shoes", "Slip On Shoes", "Mary Jane Shoes", "Platform Shoes", "Skate Shoes", "Sandals and Slides", "Offers & Promotions", "Gift Cards"],
@@ -23,4 +23,8 @@ contenedor.innerHTML = '';
         contenedor.appendChild(crearBoton(texto));
         contenedor.appendChild(document.createElement('br'));
     })
-    }
+}
+
+
+
+
