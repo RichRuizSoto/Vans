@@ -4,7 +4,7 @@
 }
 
 .header {
-    background-color: aquamarine;
+    background-color: white;
     width: 100%;
     height: 68px;
     display: flex;
@@ -15,8 +15,48 @@
 }
 
 .header-btn {
-    width: auto;
-    height: 100%;
+    background-color: transparent;
+    border: none;
+    background-size: cover;
+    height: 38px;
+    width: 38px;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.header-menu-btn {
+    background-image: url(./../icons/hamburguer-icon.png);
+        height: 30px;
+    width: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.header-vans-btn {
+    background-image: url(./../icons/vans.png);
+    height: 50px;
+    width: 90px;
+}
+
+.header-btn-div {
+    width: 210px;
+}
+
+.header-profile-btn {
+    background-image: url(./../icons/profile.png);
+}
+
+.header-chat-btn {
+    background-image: url(./../icons/chat.png);
+}
+
+.header-search-btn {
+    background-image: url(./../icons/search.png);
+}
+
+.header-cart-btn {
+    background-image: url(./../icons/cart.png);
 }
 
 .main {
@@ -28,7 +68,7 @@
     width: 100%;
     height: auto;
     min-height: 595px;
-  box-shadow: 0 0px 20px 15px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0px 20px 15px rgba(0, 0, 0, 0.7);
 }
 
 .footer-contenedor-btn {
@@ -82,13 +122,13 @@
 
 .facebook-btn {
     background-image: url(./../icons/facebook.png);
-        width: 12px;
+    width: 12px;
     height: 12px;
 }
 
 .pinterest-btn {
     background-image: url(./../icons/pinterest.png);
-        width: 16px;
+    width: 16px;
     height: 16px;
 }
 
@@ -111,7 +151,7 @@
 }
 
 .location-flag {
-        background-color: transparent;
+    background-color: transparent;
     background-image: url(./../icons/flag.png);
     background-size: cover;
     height: 18px;
@@ -121,9 +161,9 @@
 }
 
 .location-text {
-        background-color: transparent;
+    background-color: transparent;
     color: rgb(199, 199, 199);
-    border: none;        
+    border: none;
     cursor: pointer;
     font-size: 12px;
     justify-content: center;
