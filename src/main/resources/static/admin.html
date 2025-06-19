@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles/admin.css">
+</head>
+
+<body class="body">
+
+    <header class="header">
+
+        <button class="header-btn header-menu-btn"></button>
+
+        <div class="header-btn-div">
+        <button class="header-btn header-vans-btn"></button>
+
+        </div>
+
+    </header>
+
+<main class="main">
+
+    <section class="form-section">
+        <h2>Agregar Nuevo Producto</h2>
+        <form action="#" method="post" class="product-form">
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="precio">Precio:</label>
+            <input type="number" id="precio" name="precio" step="0.01" required>
+
+            <label for="estilo">Estilo:</label>
+            <select id="estilo" name="estilo" required>
+                <option value="">Seleccione una opción</option>
+                <option value="deportivo">Deportivo</option>
+                <option value="casual">Casual</option>
+            </select>
+
+            <button type="submit">Agregar Producto</button>
+        </form>
+    </section>
+
+</main>
+
+
+
+    <footer class="footer">
+
+        <section class="footer-contenedor-final">
+            <nav class="contenedor-final-redes">
+                <button class="x-btn contenedor-final-redes-btn"></button>
+                <button class="facebook-btn contenedor-final-redes-btn"></button>
+                <button class="pinterest-btn contenedor-final-redes-btn"></button>
+                <button class="youtube-btn contenedor-final-redes-btn"></button>
+                <button class="instagram-btn contenedor-final-redes-btn"></button>
+                <div class="div-location">
+                    <button class="location-flag"></button>
+                    <button class="location-text">EN | Change Location</button>
+                </div>
+            </nav>
+            <br><br>
+            <section class="footer-contenedor-term">
+                <button class="contenedor-term-btn">Modern Slavery Statement</button>
+                <button class="contenedor-term-btn">Privacy Policy</button>
+                <button class="contenedor-term-btn">Your Privacy Choices</button>
+                <button class="contenedor-term-btn">Terms of Use</button>
+                <button class="contenedor-term-btn">Accessibility Statement</button>
+                <button class="contenedor-term-btn">Notice at Collection</button>
+                <button class="contenedor-term-btn">Cookie Preferences</button>
+            </section>
+        </section>
+    </footer>
+
+
+
+
+    <script src="./../scripts/admin.js"></script>
+
+</body>
+
+</html>
