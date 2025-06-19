@@ -122,18 +122,19 @@
     margin: 20px;
 }
 
-.segundo-btn-div {
+.segundo-btn-div, .sexto-btn-div {
     width: 100%;
     height: 705px;
     display: flex;
     justify-content: space-between;
 }
 
-.segundo-div-btn {
+.segundo-div-btn, .sexto-div-btn {
     height: 100%;
     width: 33.2%;
     background-size: cover;
     border: none;
+    cursor: pointer;
 }
 
 .primer-btn-segundo-div {
@@ -149,7 +150,7 @@
 }
 
 .tercer-btn-div {
-    background-color: bisque;
+    background-color: transparent;
     width: 100%;
     height: 720px;
         background-size: cover;
@@ -160,7 +161,9 @@
 
 }
 
-.tercer-div-btn {
+
+
+.tercer-div-btn, .quinto-div-btn {
     width: 30%;
     height: 620px;
     display: inline-block;
@@ -208,6 +211,100 @@
     background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_488,w_390,e_unsharp_mask:100/dpr_2.0/v1745513440/VN000KYJBLK-HERO/Skate-Overnight-Pack.jpg?$PLP-IMAGE$');
 }
 
+.cuarto-div-main {
+  width: 100%;
+  height: 700px;          
+  overflow: hidden;        
+  position: relative;
+}
+
+.cuarto-div-main-btn img {
+  width: 100%;       
+  height: auto;        
+  display: block;         
+  transform: translateY(0%);  
+}
+
+
+.cuarto-div-main-btn {
+    cursor: pointer;
+    border: none;
+    padding: 0%;
+}
+
+.primer-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1748985846/VN000D83IZQ-HERO/Super-Lowpro-Shoe.png');
+}
+
+.segundo-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1741207367/VN000HRWCLR-HERO/Lil-Pergs-Tote-Bag.png');
+}
+
+.tercer-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1747942442/VN000D3HY28-HERO/Old-Skool-Shoe.png');
+}
+
+.cuarto-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1742319951/VN000H4ZCLR-HERO/Old-Skool-Backpack.png');
+}
+
+.quinto-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1744838487/VN000D6YIZQ-HERO/Classic-SlipOn-Checkerboard-Shoe.png');
+}
+
+.sexto-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1742246040/VN000D07LPR-HERO/Mary-Jane-Creeper-Shoe.png');
+}
+
+.septimo-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1742926191/VN000D75Y28-HERO/Knu-Skool-Shoe.png');
+}
+
+.octavo-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1748984920/VN000D83BLA-HERO/Super-Lowpro-Shoe.png');
+}
+
+.noveno-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1748985846/VN000D83IZQ-HERO/Super-Lowpro-Shoe.png');
+}
+
+.decimo-btn-quinto-div {
+    background-image: url('https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_615,w_492,e_unsharp_mask:100/dpr_2.0/v1741207367/VN000HRWCLR-HERO/Lil-Pergs-Tote-Bag.png');
+}
+
+.sexto-btn-div {
+    width: 100%;
+    height: auto;
+}
+
+.primer-btn-sexto-div, .segundo-btn-sexto-div, .tercer-btn-sexto-div {
+    margin: 0%;
+    width: 33%;
+    height: 700px;
+}
+
+.primer-btn-sexto-div {
+    background-image: url('https://assets.vans.com/image/upload/c_limit,w_1920/q_auto:best,f_auto:image,d_na.png/v1749663377/SP25_LP_Homepage_LinkedCards-Carousel-02-01_06122025_Desktop_477x606_Image');
+}
+
+.segundo-btn-sexto-div {
+    background-image: url('https://assets.vans.com/image/upload/q_auto:best,f_auto:image,d_na.png/v1749663383/SP25_LP_Homepage_LinkedCards-Carousel-02-02_06122025_Desktop_477x606_Image');
+}
+
+.tercer-btn-sexto-div {
+    background-image: url('https://assets.vans.com/image/upload/c_limit,w_1920/q_auto:best,f_auto:image,d_na.png/v1749663380/SP25_LP_Homepage_LinkedCards-Carousel-02-03_06122025_Desktop_477x606_Image');
+}
+
+.cuarto-btn-sexto-div {
+    width: 100%;
+    height: 710px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 0%;
+    background-image: url('https://assets.vans.com/image/upload/c_limit,w_1920/q_auto:best,f_auto:image,d_na.png/v1749584989/SP25_LP_Homepage_LinkedCards-Full-02_06122025_Desktop_1440x601_Image');
+    background-size: cover;
+    border: none;
+}
 
 
 
