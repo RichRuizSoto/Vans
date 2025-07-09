@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Vans Shop</title>
@@ -12,13 +12,13 @@
                 <img src="img/logo-vans.png" alt="Vans Logo">
             </div>
             <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
+                <li><a th:href="@{/}">Inicio</a></li>
                 <li><a href="#">Hombres</a></li>
                 <li><a href="#">Mujeres</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="login.html">Inicio sesion</a></li>
+                <li><a th:href="@{/catalogo}">Catálogo</a></li>
+                <li><a th:href="@{/carrito}">Carrito</a></li>
+                <li><a th:href="@{/historial}">Historial</a></li>
+                <li><a th:href="@{/login}">Iniciar sesión</a></li>
             </ul>
         </nav>
     </header>

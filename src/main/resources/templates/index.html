@@ -1,10 +1,10 @@
-<html>
-
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Home</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../styles/index.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./../styles/index.css" />
 </head>
 
 <body class="body">
@@ -15,23 +15,18 @@
 
         <div class="header-btn-div">
            
-            <a href="login.html">
-                <button class="header-btn header-profile-btn"></button>
+            <a th:href="@{/login}">
+                <button type="button" class="header-btn header-profile-btn"></button>
             </a>
-
-            
-            
-
-           
-            <a href="catalogo.html">
+            <a th:href="@{/catalogo}">
                 <button class="header-btn header-search-btn"></button>
             </a>
 
-            <a href="historial.html">
+            <a th:href="@{/historial}">
                 <button class="header-btn header-chat-btn"></button>
             </a>
             
-            <a href="carrito.html">
+             <a th:href="@{/carrito}">
                 <button class="header-btn header-cart-btn"></button>
             </a>
 
