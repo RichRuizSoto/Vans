@@ -12,6 +12,7 @@ import lombok.Data;
  */
 
 @Entity
+@Table(name = "productos")
 @Data
 public class Producto {
     @Id

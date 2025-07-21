@@ -4,14 +4,12 @@
  */
 
 package com.example.demo.repositorio;
+
 import com.example.demo.domain.Historial;
 import com.example.demo.domain.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
-/**
- *
- * @author nigel
- */
+
 public interface HistorialRepositorio extends JpaRepository<Historial, Long> {
     List<Historial> findByUsuario(Usuario usuario);
 }

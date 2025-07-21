@@ -12,6 +12,7 @@ import lombok.Data;
  * @author nigel
  */
 @Entity
+@Table(name = "usuarios")
 @Data
 public class Usuario {
     @Id

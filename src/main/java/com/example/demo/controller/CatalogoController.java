@@ -10,11 +10,16 @@ import com.example.demo.domain.Historial;
 import com.example.demo.repositorio.ProductoRepositorio;
 import com.example.demo.repositorio.UsuarioRepositorio;
 import com.example.demo.repositorio.HistorialRepositorio;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-/**"C:\Projects\Vans\src\main\java\com\example\demo\controller\CatalogoController.java"
+
+import java.util.List;
+import java.util.ArrayList; 
+
+/**
  *
  * @author nigel
  */
@@ -57,5 +62,17 @@ public class CatalogoController {
         producto.setTotal(producto.getPrecio() * producto.getCantidad());
         productoRepo.save(producto);
         return "redirect:/catalogo";
+    }
+
+    @PostMapping("/carrito/agregar/{id}")
+    public String agregarAlCarrito(@PathVariable Long id, HttpSession session) {
+        Producto producto = productoRepo.findById(id).orElseThrow();
+        List<Producto> carrito = (List<Producto>) session.getAttribute("carrito");
+        if (carrito == null) {
+            carrito = new ArrayList<>();
+        }
+        carrito.add(producto);
+        session.setAttribute("carrito", carrito);
+        return "redirect:/carrito";
     }
 }

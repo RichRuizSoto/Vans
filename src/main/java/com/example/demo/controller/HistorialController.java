@@ -4,6 +4,7 @@
  */
 
 package com.example.demo.controller;
+
 import com.example.demo.domain.Usuario;
 import com.example.demo.domain.Historial;
 import com.example.demo.repositorio.UsuarioRepositorio;
@@ -14,10 +15,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-/**
- *
- * @author nigel
- */
 
 @Controller
 @RequiredArgsConstructor
@@ -28,17 +25,17 @@ public class HistorialController {
     private final HistorialRepositorio historialRepo;
 
     @GetMapping
-    public String historial(Model model) {
+    public String historial(@RequestParam(required = false) Long usuarioId, Model model) {
+        List<Historial> historial;
+        if (usuarioId != null) {
+            Usuario usuario = usuarioRepo.findById(usuarioId).orElse(null);
+            historial = (usuario != null) ? historialRepo.findByUsuario(usuario) : List.of();
+            model.addAttribute("usuarioSeleccionado", usuario);
+        } else {
+            historial = historialRepo.findAll();
+        }
         model.addAttribute("usuarios", usuarioRepo.findAll());
-        return "historial";
-    }
-
-    @GetMapping("/{usuarioId}")
-    public String historialUsuario(@PathVariable Long usuarioId, Model model) {
-        Usuario usuario = usuarioRepo.findById(usuarioId).orElseThrow();
-        List<Historial> historial = historialRepo.findByUsuario(usuario);
         model.addAttribute("historial", historial);
-        model.addAttribute("usuario", usuario);
         return "historial";
     }
 }
