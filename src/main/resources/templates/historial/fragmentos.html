@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+
+    <th:block th:fragment="main">
+        <main class="historial-container" th:fragment="main">
+            <h2 style="margin-top: 7rem;">Historial de Compras</h2>
+
+            <form method="get" th:action="@{/historial}">
+                <label for="usuarioId">Filtrar por Usuario:</label>
+                <select name="usuarioId" id="usuarioId">
+                    <option value="">Ver todos</option>
+                    <option th:each="usuario : ${usuarios}" th:value="${usuario.id}"
+                        th:selected="${usuario.id == usuarioSeleccionado?.id}" th:text="${usuario.nombre}"></option>
+                </select>
+                <button type="submit">Ver Historial</button>
+            </form>
+
+            <section class="tabla-historial" style="margin-bottom: 5rem; margin-top: 1rem">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Usuario</th>
+                            <th>Fecha</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="item, iterStat : ${historial}">
+                            <td th:text="${iterStat.index + 1}">1</td>
+                            <td th:text="${item.usuario.nombre}">Usuario</td>
+                            <td th:text="${#dates.format(item.fechaCompra, 'dd/MM/yyyy HH:mm')}">05/07/2025</td>
+                            <td th:text="${item.producto.nombre}">Vans Old Skool</td>
+                            <td th:text="${item.producto.precio}">$59.99</td>
+                            <td th:text="${item.estado}">Confirmado</td>
+                        </tr>
+                        <tr th:if="${#lists.isEmpty(historial)}">
+                            <td colspan="6" style="text-align: center;">No hay compras registradas aún.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </th:block>
+
+</body>
+
+</html>
