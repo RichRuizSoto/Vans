@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head></head>
+
+<body>
+
+    <th:block th:fragment="main">
+        <main th:fragment="main">
+            <h2>Catálogo de Productos</h2>
+
+            <section class="productos">
+                <div th:each="producto : ${productos}" class="producto">
+                    <img src="https://assets.vans.com/images/t_img/c_fill,g_center,f_auto,h_488,w_390,e_unsharp_mask:100/dpr_2.0/v1745866357/VN000D85GRY-HERO/Skate-Curren-Caples-Shoe.png?$PLP-IMAGE$" 
+                         alt="Imagen Producto" />
+                    <h3 th:text="${producto.nombre}">Nombre Producto</h3>
+                    <p>Precio: ₡<span th:text="${producto.precio}">0.00</span></p>
+                    <p>Disponibles: <span th:text="${producto.cantidad}">0</span></p>
+                    <form th:action="@{'/catalogo/carrito/agregar/' + ${producto.id}}" method="post">
+                        <button type="submit">Agregar al carrito</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </th:block>
+
+</body>
+
+</html>
