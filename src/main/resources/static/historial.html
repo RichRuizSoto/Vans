@@ -13,50 +13,62 @@
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Hombres</a></li>
-                <li><a href="#">Mujeres</a></li>
-                <li><a href="#">Ofertas</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="login.html">Inicio sesion</a></li>
+                <li><a href="static/carrito/carrito.html">Carrito</a></li>
+                <li><a href="historial.html" class="active">Historial</a></li>
+                <li><a href="login.html">Inicio sesión</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="historial-container">
         <h2>Historial de Compras</h2>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="status-filter">Filtrar por estado:</label>
+                <select id="status-filter" onchange="filterTable()">
+                    <option value="all">Todos</option>
+                    <option value="delivered">Entregado</option>
+                    <option value="shipping">En camino</option>
+                    <option value="processing">Procesando</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="date-filter">Rango de fechas:</label>
+                <input type="date" id="date-from" onchange="filterTable()"> -
+                <input type="date" id="date-to" onchange="filterTable()">
+            </div>
+        </div>
 
         <section class="tabla-historial">
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>Fecha</th>
+                        <th># <button class="sort-btn" onclick="sortTable(0)">⇅</button></th>
+                        <th>Fecha <button class="sort-btn" onclick="sortTable(1)">⇅</button></th>
                         <th>Productos</th>
-                        <th>Total</th>
-                        <th>Estado</th>
+                        <th>Total <button class="sort-btn" onclick="sortTable(3)">⇅</button></th>
+                        <th>Estado <button class="sort-btn" onclick="sortTable(4)">⇅</button></th>
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Fila de ejemplo -->
-                    <tr>
+                    <tr data-id="1" data-date="2025-07-05" data-status="delivered" data-amount="149.98">
                         <td>1</td>
                         <td>05/07/2025</td>
                         <td>
-                            Vans Old Skool<br>
-                            Vans Sk8-Hi
+                            <div class="product-item">Vans Old Skool</div>
+                            <div class="product-item">Vans Sk8-Hi</div>
                         </td>
                         <td>$149.98</td>
-                        <td>Entregado</td>
+                        <td><span class="status-badge delivered">Entregado</span></td>
                     </tr>
-                    <tr>
+                    <tr data-id="2" data-date="2025-06-28" data-status="shipping" data-amount="64.99">
                         <td>2</td>
                         <td>28/06/2025</td>
                         <td>
-                            Vans Authentic
+                            <div class="product-item">Vans Authentic</div>
                         </td>
                         <td>$64.99</td>
-                        <td>En camino</td>
+                        <td><span class="status-badge shipping">En camino</span></td>
                     </tr>
                 </tbody>
             </table>

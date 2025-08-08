@@ -1,38 +1,53 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Vans Shop</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="img/logo-vans.png" alt="Vans Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Hombres</a></li>
-                <li><a href="#">Mujeres</a></li>
-                <li><a href="catalogo.html">Catalogo</a></li>
-                <li><a href="carrito.html">Carrito</a></li>
-                <li><a href="historial.html">Historial</a></li>
-                <li><a href="login.html">Inicio sesion</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Vans Shop</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="icons/vans.png" alt="Vans Logo">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#">Hombres</a></li>
+                    <li><a href="#">Mujeres</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="carrito.html">Carrito</a></li>
+                    <li><a href="historial.html">Historial</a></li>
+                    <li><a href="login.html">Inicio sesion</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="productos">
-            <!-- Aquí van productos de ejemplo -->
-            <div class="producto">
-                <img src="img/zapato1.jpg" alt="Zapato Vans">
-                <h3>Vans Old Skool</h3>
-                <p>$69.99</p>
-                <button>Añadir al carrito</button>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+        <main>
+            <section class="productos" id="productos-container">
+                <div class="producto">
+                    <img src="img/zapato1.jpg" alt="Zapato Vans">
+                    <h3>Vans Old Skool</h3>
+                    <p>$<span class="precio-producto">69.99</span></p>
+                    <button class="add-to-cart-btn"
+                            data-id="1"
+                            data-modelo="Vans Old Skool"
+                            data-precio="69.99"
+                            data-imagen="img/zapato1.jpg">Añadir al carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="img/zapato2.jpg" alt="Zapato Vans">
+                    <h3>Vans Sk8-Hi</h3>
+                    <p>$<span class="precio-producto">74.99</span></p>
+                    <button class="add-to-cart-btn"
+                            data-id="2"
+                            data-modelo="Vans Sk8-Hi"
+                            data-precio="74.99"
+                            data-imagen="img/zapato2.jpg">Añadir al carrito</button>
+                </div>
+            </section>
+        </main>
+        <script src="js/carrito.js"></script>
+    </body>
+    </html>
+    
