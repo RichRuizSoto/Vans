@@ -6,6 +6,7 @@
 package com.example.demo.controller;
 import com.example.demo.domain.Usuario;
 import com.example.demo.repositorio.UsuarioRepositorio;
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
  *
  * @author nigel
  */
+
 @Controller
 @RequiredArgsConstructor
 @RequestMapping("/login")
@@ -27,9 +29,11 @@ public class LoginController {
     }
 
     @PostMapping
-    public String procesarLogin(@RequestParam String correo, @RequestParam String contrasena, Model model) {
+    public String procesarLogin(@RequestParam String correo, @RequestParam String contrasena, Model model, HttpSession session) {
         Usuario usuario = usuarioRepo.findByCorreo(correo);
         if (usuario != null && usuario.getContrasena().equals(contrasena)) {
+            // Guardar usuario en sesión
+            session.setAttribute("usuarioLogeado", usuario);
             return "redirect:/catalogo";
         } else {
             model.addAttribute("error", "Credenciales incorrectas.");
@@ -37,4 +41,3 @@ public class LoginController {
         }
     }
 }
-

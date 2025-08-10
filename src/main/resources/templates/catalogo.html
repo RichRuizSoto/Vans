@@ -11,6 +11,11 @@
         <div class="logo">
             <img src="img/logo-vans.png" alt="Vans Logo">
         </div>
+        
+        <span th:if="${usuarioSesion != null}">
+        Bienvenido, <b th:text="${usuarioSesion.correo}"></b>
+    </span>
+    <a th:if="${usuarioSesion != null}" href="/logout" class="btn btn-danger btn-sm">Cerrar sesión</a>
         <ul class="nav-links">
             <li><a th:href="@{/}">Inicio</a></li>
             <li><a href="#">Hombres</a></li>

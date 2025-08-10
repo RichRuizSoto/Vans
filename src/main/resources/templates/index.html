@@ -30,7 +30,12 @@
                 <button class="header-btn header-cart-btn"></button>
             </a>
 
-            
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span th:if="${usuarioSesion != null}">
+                    Bienvenido, <b th:text="${usuarioSesion.correo}"></b>
+                </span>
+                <a th:if="${usuarioSesion != null}" href="/logout" class="btn btn-danger btn-sm">Cerrar sesión</a>
+            </div>
            
         </div>
     </header>
