@@ -3,7 +3,7 @@ import com.example.demo.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import com.example.demo.repository.UsuarioDao;
+import com.example.demo.dao.UsuarioDao;
 
 @Service
 public class UsuarioService {

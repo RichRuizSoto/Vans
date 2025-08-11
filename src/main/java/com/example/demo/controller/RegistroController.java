@@ -1,8 +1,8 @@
 package com.example.demo.controller;
 import com.example.demo.model.Rol;
 import com.example.demo.model.Usuario;
-import com.example.demo.repository.RolDao;
-import com.example.demo.repository.UsuarioDao;
+import com.example.demo.dao.RolDao;
+import com.example.demo.dao.UsuarioDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;

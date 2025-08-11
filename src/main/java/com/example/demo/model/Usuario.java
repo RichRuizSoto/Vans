@@ -40,8 +40,16 @@ public class Usuario{
     public void setRoles(Set<com.example.demo.model.Rol> roles) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
+
+    public Long getIdUsuario() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     public enum Rol{
-        ADMIN, CLIENTE
+        ADMIN, CLIENTE;
+
+        public String getNombre() {
+            throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        }
     }
     
     public String getUsername() { 
